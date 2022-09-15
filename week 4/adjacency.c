@@ -68,13 +68,28 @@ void print1dOrder(int *graphArray1d)
 }
 
 // print nodes in tabular format, so that it looks like the 2d matrix given initially
-void printTabular(int *graphArray1d)
+void printTabular(int * graphArray1d)
 {
+	for (int i=0; i< NODES*NODES; i++) {
+		printf("%d ",graphArray1d[i]);
+		if((i+1) % NODES == 0)
+			printf("\n");
+		}
 }
 
 // print a list of ordered pairs (i,j) where there is a node from i to j
-void printOrderedPairs(int *graphArray1d)
+void printOrderedPairs(int * graphArray1d)
 {
+
+	for(int r = 0;r< NODES; r++){
+
+		for(int c = 0; c<r; c++){
+
+			if(graphArray1d[r*NODES+c] == 1)
+				printf("(%d,%d)\n",r,c);
+
+		}
+	}
 }
 
 // for input node basenode, print a list of the nodes where there is an edge from basenode
@@ -83,13 +98,15 @@ void printAdjacentNodes(int basenode, int *graphArray1d)
 }
 
 // add an edge from node1 to node2 or give a message if there is already such an edge
-void addEdge(int node1, int node2, int *graphArray1d)
+void addEdge(int node1, int node2, int * graphArray1d)
 {
+	graphArray1d[node1*NODES+node2] = 1;
 }
 
 // return 1 if there is an edge from node1 to node 2, return 0 otherwise
-int areConnected(int node1, int node2, int *graphArray1d)
+int areConnected(int node1, int node2, int * graphArray1d)
 {
+		return graphArray1d[node1*NODES+node2];
 }
 
 // return 1 if the graph is undirected (symmetric), return 0 otherwise
