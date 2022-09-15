@@ -93,8 +93,13 @@ void printOrderedPairs(int * graphArray1d)
 }
 
 // for input node basenode, print a list of the nodes where there is an edge from basenode
-void printAdjacentNodes(int basenode, int *graphArray1d)
+void printAdjacentNodes(int basenode, int * graphArray1d)
 {
+	for(int j = 0; j < NODES; j++){
+		if(graphArray1d[basenode*NODES + j] == 1){
+			printf("%d\n", j);
+		}
+	}
 }
 
 // add an edge from node1 to node2 or give a message if there is already such an edge
