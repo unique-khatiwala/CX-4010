@@ -1,9 +1,6 @@
 /*
 addEdge should add an edge from specified node 1 to specified node 2
     if there is not an edge currently and should print a message if there is already such an edge.
-
-
-
 */
 #include <stdio.h>
 #define EDGES 20

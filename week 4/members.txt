@@ -1,0 +1,16 @@
+Jiarui Yan
+Hongbo Hu
+Kewal Pinakinkumar Khatiwala
+
+Adjacency. C : it was fairly easy to get used to by following the 
+numbering logic that is used for graphs and finding a formula to 
+represent a location by it. The tricky part was analyzing the 
+matrix which can be done fairly easily with other languages. 
+
+edges.c : the hard part is to visualize graph as edges in mind and
+treat them as number-pairs and manage them in an array. Also it is 
+important to pass array in pointers form
+
+bitops: it is important to understand the definition of "AND", "OR"
+and "XOR". Traverse the characters in strings is a difficult point 
+for this question.
